@@ -1,0 +1,15 @@
+{
+  "name": "unique-site",
+  "version": "1.0.0",
+  "description": "Unique Prospect Montesorri Academy Website",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "tobajoseph@gmail.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}

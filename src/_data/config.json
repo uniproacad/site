@@ -1,0 +1,29 @@
+{
+  "name": "Unique Prospect Montessori Academy",
+  "email": "info@uniqueprospectacademy.com",
+  "phone": "+2348080462150",
+  "phoneFormatted": "(234) 808-046-2150",
+  "domain": "www.uniqueprospectmontessoriacademy.com",
+  "address": {
+    "lineOne": "1(N)1 Road",
+    "lineTwo": "Near Bisola lodge, Phase 2, FHA, Lugbe, Abuja.",
+    "city": "Abuja",
+    "county": "Lugbe",
+    "postcode": "900107",
+    "mapLink": "https://goo.gl/maps/oLUHCKMr96vGzkaWA"
+  },
+  "socialHandles":[
+    {
+      "name":"facebook",
+      "url":"https://www.facebook.com/profile.php?id=100075978890593"
+    },
+    {
+      "name":"twitter",
+      "url":"#"
+    },
+    {
+      "name":"linkedin",
+      "url":"#"
+    }
+  ]
+}

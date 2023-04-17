@@ -396,31 +396,6 @@ The PTF is a prayer session instituted to bring parents and teachers together un
   </div>
 </section>
 
-<section
-  class="ftco-intro"
-  style="background-image: url(/images/bg_3.jpg)"
-  data-stellar-background-ratio="0.5"
->
-  <div class="overlay"></div>
-  <div class="container">
-    <div class="row">
-      <div class="col-md-9">
-        <h2>Teaching Your Child Some Good Manners</h2>
-        <p class="mb-0">
-          A small river named Duden flows by their place and supplies it with
-          the necessary regelialia. It is a paradisematic country, in which
-          roasted parts of sentences fly into your mouth.
-        </p>
-      </div>
-      <div class="col-md-3 d-flex align-items-center">
-        <p class="mb-0">
-          <a href="#" class="btn btn-secondary px-4 py-3">Take a Course</a>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="ftco-section ftco-no-pb">
   <div class="container">
     <div class="row justify-content-center mb-5 pb-2">
@@ -431,7 +406,7 @@ The PTF is a prayer session instituted to bring parents and teachers together un
           and supplies it with the necessary regelialia. It is a paradisematic
           country
         </p>
-      </div>
+      </div> 
     </div>
     <div class="row">
       <div class="col-md-6 col-lg-3 ftco-animate">
@@ -755,25 +730,26 @@ The PTF is a prayer session instituted to bring parents and teachers together un
             Vokalia and Consonantia, there live the blind texts.
           </p>
         </div>
-        <form action="#" class="appointment-form ftco-animate">
+        <form id="interest-booking-form" method = "post" action="https://script.google.com/macros/s/AKfycbzR-3JuYfvPw0_fkdSZ0vHwNWKByjrvySFPhsmxTp-_k6hLPIv6YLCYvfHaFqA8jl101A/exec" class="appointment-form ftco-animate">
           <div class="d-md-flex">
             <div class="form-group">
               <input
-                type="text"
+                type="text" name="FirstName"
                 class="form-control"
-                placeholder="First Name"
+                placeholder="First Name *" 
+                required
               />
             </div>
             <div class="form-group ml-md-4">
-              <input type="text" class="form-control" placeholder="Last Name" />
+              <input type="text" name="LastName" class="form-control" placeholder="Last Name *" required/>
             </div>
           </div>
           <div class="d-md-flex">
-             <div class="form-group ml-md-4">
-              <input type="text" class="form-control" placeholder="Phone" />
+             <div class="form-group">
+              <input type="text" name="Phone" class="form-control" placeholder="Phone *" required/>
             </div>
             <div class="form-group ml-md-4">
-              <input type="text" class="form-control" placeholder="Email Address" />
+              <input name="Email" type="email" class="form-control" placeholder="Email Address" />
             </div>
           </div>
           <div class="d-md-flex">
@@ -783,30 +759,32 @@ The PTF is a prayer session instituted to bring parents and teachers together un
                   <div class="icon">
                     <span class="ion-ios-arrow-down"></span>
                   </div>
-                  <select name="" id="" class="form-control">
+                  <select name="Interest" class="form-control">
                     <option value="">Select School Level</option>
-                    <option value="">kindergarten</option>
-                    <option value="">Nursery & Primary</option>
-                    <option value="">Secondary</option>
-                    <option value="">Others</option>
+                    <option value="kindergarten">kindergarten</option>
+                    <option value="Nursery & Primary">Nursery & Primary</option>
+                    <option value="Secondary">Secondary</option>
+                    <option value="Others">Others</option>
                   </select>
                 </div>
               </div>
             </div>
-            <div class="form-group">
+            <div class="form-group ml-md-4">
               <textarea
-                name=""
-                id=""
+                name="Message"
+                id="Message"
                 cols="30"
                 rows="2"
                 class="form-control"
                 placeholder="Message"
               ></textarea>
             </div>
+          </div>
+          <div class="d-md-flex">
             <div class="form-group ml-md-4">
               <input
                 type="submit"
-                value="Request A Quote"
+                value="Apply"
                 class="btn btn-secondary py-3 px-4"
               />
             </div>
@@ -1003,3 +981,23 @@ The PTF is a prayer session instituted to bring parents and teachers together un
     </div>
   </div>
 </section>
+ <script>
+         window.addEventListener("load", function() {
+  const form = document.getElementById('interest-booking-form');
+  form.addEventListener("submit", function(e) {
+    e.preventDefault();
+    const data = new FormData(form);
+    const action = e.target.action;
+    fetch(action, {
+      method: 'POST',
+      body: data,
+    })
+    .then(() => {
+      alert("Successfully submitted. We'll get in touch shortly. Thank you!");
+      form.reset(); // reset the form after successful submission
+    })
+    .catch(error => console.error(error)); // catch and log any errors
+  });
+});
+ </script>
+         

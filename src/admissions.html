@@ -4,7 +4,7 @@ layout: "base.njk"
 
 <section
   class="hero-wrap hero-wrap-2"
-  style="background-image: url('images/bg_2.jpg')"
+  style="background-image: url('/images/bg_2.jpg')"
 >
   <div class="overlay"></div>
   <div class="container">
@@ -12,110 +12,121 @@ layout: "base.njk"
       class="row no-gutters slider-text align-items-center justify-content-center"
     >
       <div class="col-md-9 ftco-animate text-center">
-        <h1 class="mb-2 bread">Our Courses</h1>
+        <h1 class="mb-2 bread">Academics and Admission</h1>
         <p class="breadcrumbs">
           <span class="mr-2"
             ><a href="/">Home <i class="ion-ios-arrow-forward"></i></a
           ></span>
-          <span>Courses <i class="ion-ios-arrow-forward"></i></span>
+          <span>Academics <i class="ion-ios-arrow-forward"></i></span>
         </p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="ftco-section">
+<section class="ftco-section ftco-no-pt ftc-no-pb">
   <div class="container">
     <div class="row">
-      <div class="col-md-6 course d-lg-flex ftco-animate">
-        <div
-          class="img"
-          style="background-image: url(/images/course-1.jpg)"
-        ></div>
-        <div class="text bg-light p-4">
-          <h3><a href="#">Arts Lesson</a></h3>
-          <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-          <p>
-            Separated they live in. A small river named Duden flows by their
-            place and supplies it with the necessary regelialia. It is a
-            paradisematic country
-          </p>
+      <div class="col-md-6 order-md-last wrap-about py-5 wrap-about bg-light">
+        <div class="container">
+          <div class="row justify-content-end">
+            <div class="col-md-12 py-5 px-md-5 bg-primary">
+              <div class="heading-section heading-section-white ftco-animate mb-5">
+                <h2 class="mb-4">Apply for a Unique Spot for Your Kid Now!</h2>
+                <p>
+                  To apply to our school, start by completing the application form below now.
+                </p>
+              </div>
+              <form id="interest-booking-form" method = "post" action="https://script.google.com/macros/s/AKfycbzR-3JuYfvPw0_fkdSZ0vHwNWKByjrvySFPhsmxTp-_k6hLPIv6YLCYvfHaFqA8jl101A/exec" class="appointment-form ftco-animate">
+                <div class="d-md-flex">
+                  <div class="form-group">
+                    <input
+                      type="text" name="FirstName"
+                      class="form-control"
+                      placeholder="First Name *" 
+                      required
+                    />
+                  </div>
+                  <div class="form-group ml-md-4">
+                    <input type="text" name="LastName" class="form-control" placeholder="Last Name *" required/>
+                  </div>
+                </div>
+                <div class="d-md-flex">
+                  <div class="form-group">
+                    <input type="text" name="Phone" class="form-control" placeholder="Phone *" required/>
+                  </div>
+                  <div class="form-group ml-md-4">
+                    <input name="Email" type="email" class="form-control" placeholder="Email Address" />
+                  </div>
+                </div>
+                <div class="d-md-flex">
+                  <div class="form-group">
+                    <div class="form-field">
+                      <div class="select-wrap">
+                        <div class="icon">
+                          <span class="ion-ios-arrow-down"></span>
+                        </div>
+                        <select name="Interest" class="form-control" style="color: rgb(136, 136, 136);">
+                          <option value="">Select School Level</option>
+                          <option value="kindergarten">kindergarten</option>
+                          <option value="Nursery & Primary">Nursery & Primary</option>
+                          <option value="Secondary">Secondary</option>
+                          <option value="Others">Others</option>
+                        </select>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="form-group ml-md-4">
+                    <textarea
+                      name="Message"
+                      id="Message"
+                      cols="30"
+                      rows="2"
+                      class="form-control"
+                      placeholder="Message"
+                    ></textarea>
+                  </div>
+                </div>
+                <div class="d-md-flex">
+                  <div class="form-group ml-md-4">
+                    <input
+                      type="submit"
+                      value="Apply"
+                      class="btn btn-secondary py-3 px-4"
+                    />
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
         </div>
       </div>
-      <div class="col-md-6 course d-lg-flex ftco-animate">
-        <div
-          class="img"
-          style="background-image: url(/images/course-2.jpg)"
-        ></div>
-        <div class="text bg-light p-4">
-          <h3><a href="#">Language Lesson</a></h3>
-          <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-          <p>
-            Separated they live in. A small river named Duden flows by their
-            place and supplies it with the necessary regelialia. It is a
-            paradisematic country
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 course d-lg-flex ftco-animate">
-        <div
-          class="img"
-          style="background-image: url(/images/course-3.jpg)"
-        ></div>
-        <div class="text bg-light p-4">
-          <h3><a href="#">Music Lesson</a></h3>
-          <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-          <p>
-            Separated they live in. A small river named Duden flows by their
-            place and supplies it with the necessary regelialia. It is a
-            paradisematic country
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 course d-lg-flex ftco-animate">
-        <div
-          class="img"
-          style="background-image: url(/images/course-4.jpg)"
-        ></div>
-        <div class="text bg-light p-4">
-          <h3><a href="#">Sports Lesson</a></h3>
-          <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-          <p>
-            Separated they live in. A small river named Duden flows by their
-            place and supplies it with the necessary regelialia. It is a
-            paradisematic country
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 course d-lg-flex ftco-animate">
-        <div
-          class="img"
-          style="background-image: url(/images/course-5.jpg)"
-        ></div>
-        <div class="text bg-light p-4">
-          <h3><a href="#">Study Lesson</a></h3>
-          <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-          <p>
-            Separated they live in. A small river named Duden flows by their
-            place and supplies it with the necessary regelialia. It is a
-            paradisematic country
-          </p>
-        </div>
-      </div>
-      <div class="col-md-6 course d-lg-flex ftco-animate">
-        <div
-          class="img"
-          style="background-image: url(/images/course-6.jpg)"
-        ></div>
-        <div class="text bg-light p-4">
-          <h3><a href="#">Experiment Lesson</a></h3>
-          <p class="subheading"><span>Class time:</span> 9:00am - 10am</p>
-          <p>
-            Separated they live in. A small river named Duden flows by their
-            place and supplies it with the necessary regelialia. It is a
-            paradisematic country
-          </p>
-        </div>
+      <div class="col-md-6 wrap-about py-5 pr-md-4 ftco-animate">
+<h2 class="mb-4">Academics</h2>
+        <p>
+          Unique Prospect Montessori Academics is a highly reputable school that is dedicated to providing students with an exceptional education that emphasizes academic excellence, personal growth, creativity, critical thinking skills, and a love for learning. The school's curriculum is meticulously crafted to meet the requirements of the Nigerian educational system, while also incorporating the latest international best practices and approaches.
+        </p>
+        <p>
+          Unique Prospect Montessori Academics accepts students from a wide range of backgrounds and abilities and is committed to providing a safe, inclusive, and welcoming learning environment for all students. The school's admission process is straightforward and transparent, and the administration encourages parents and guardians to visit the school, meet the staff, and learn more about the school's programs and facilities.
+        </p>
+<p>
+  To apply for admission to Unique Prospect Montessori Academics, prospective parents and pupils can obtain an application form from the school office or download it from the school's website. Once the application is received, the school will arrange for an assessment and interview with the student to determine their academic level and ensure that the school is the right fit for their needs. During the application process, the administration also encourages parents to ask any questions they may have and is always happy to provide additional information or support.
+</p>
+
+<p> 
+At Unique Prospect Montessori Academics, education is viewed as a collaborative process between the school, the student, and the family. The administration looks forward to working together with students and their families to achieve their academic and personal goals. The school offers a range of academic programs, including:
+<ol>
+  <li>Montessori Nursery and Primary School: This program is designed for children between the ages of two and twelve years old. It offers a comprehensive curriculum that promotes academic excellence and personal growth through a combination of classroom learning, creative play, and extracurricular activities.
+
+ <li>Secondary School: The secondary school program at Unique Prospect Montessori Academics is designed for students between the ages of twelve and eighteen years old. The program offers a broad-based curriculum that covers a wide range of subjects, including mathematics, science, languages, social studies, and the arts.
+</ol>
+</p>
+
+<p>
+
+Overall, Unique Prospect Montessori Academics is committed to providing students with an exceptional education that prepares them for success in their academic and personal lives. With a comprehensive curriculum, experienced faculty, and a supportive learning environment, the school is an excellent choice for parents seeking a high-quality education for their children.
+</p>
+
       </div>
     </div>
   </div>

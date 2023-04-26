@@ -37,7 +37,7 @@ layout: "base.njk"
                   To apply to our school, start by completing the application form below now.
                 </p>
               </div>
-              <form id="interest-booking-form" method = "post" action="https://script.google.com/macros/s/AKfycbzR-3JuYfvPw0_fkdSZ0vHwNWKByjrvySFPhsmxTp-_k6hLPIv6YLCYvfHaFqA8jl101A/exec" class="appointment-form ftco-animate">
+              <form id="upma-form" method = "post" action="https://script.google.com/macros/s/AKfycbzR-3JuYfvPw0_fkdSZ0vHwNWKByjrvySFPhsmxTp-_k6hLPIv6YLCYvfHaFqA8jl101A/exec" class="appointment-form ftco-animate">
                 <div class="d-md-flex">
                   <div class="form-group">
                     <input
@@ -131,3 +131,30 @@ Overall, Unique Prospect Montessori Academics is committed to providing students
     </div>
   </div>
 </section>
+
+<script>
+  window.addEventListener("load", function () {
+    const form = document.getElementById("upma-form");
+    const submitButton = form.querySelector('button[type="submit"]');
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+      submitButton.disabled = true; // disable the submit button
+
+      const data = new FormData(form);
+      const action = e.target.action;
+      fetch(action, {
+        method: "POST",
+        body: data,
+      })
+        .then(() => {
+          alert("Successfully submitted. We'll get in touch shortly. Thank you!");
+          form.reset(); // reset the form after successful submission
+        })
+        .catch((error) => console.error(error)) // catch and log any errors
+        .finally(() => {
+          submitButton.disabled = false; // re-enable the submit button
+        });
+    });
+  });
+</script>

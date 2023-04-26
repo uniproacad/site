@@ -68,7 +68,7 @@ layout: "base.njk"
     <div class="row d-flex align-items-stretch no-gutters">
       <div class="col-md-6 p-4 p-md-5 order-md-last bg-light">
         <form
-          id="contact-form"
+          id="upma-form"
           method="post"
           action="https://script.google.com/macros/s/AKfycbxffOgNJ_QRap-GYBImCNBDicsm3F1yl2SRSx04-J0rUZ-tuu988whOJ0iWpzvauR4U/exec"
         >
@@ -124,9 +124,13 @@ layout: "base.njk"
 
 <script>
   window.addEventListener("load", function () {
-    const form = document.getElementById("contact-form");
+    const form = document.getElementById("upma-form");
+    const submitButton = form.querySelector('button[type="submit"]');
+
     form.addEventListener("submit", function (e) {
       e.preventDefault();
+      submitButton.disabled = true; // disable the submit button
+
       const data = new FormData(form);
       const action = e.target.action;
       fetch(action, {
@@ -137,7 +141,11 @@ layout: "base.njk"
           alert("Message sent successfully. Thank you!");
           form.reset(); // reset the form after successful submission
         })
-        .catch((error) => console.error(error)); // catch and log any errors
+        .catch((error) => console.error(error)) // catch and log any errors
+        .finally(() => {
+          submitButton.disabled = false; // re-enable the submit button
+        });
     });
   });
 </script>
+

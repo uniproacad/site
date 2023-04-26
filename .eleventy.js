@@ -8,6 +8,9 @@ module.exports = function(eleventyConfig){
    eleventyConfig.addPassthroughCopy("./src/_redirects");
    eleventyConfig.addPassthroughCopy({ "./src/favicon.ico": "/favicon.ico"});
    eleventyConfig.addPassthroughCopy({ "./src/robots.txt": "/robots.txt"});
+   eleventyConfig.addCollection('posts', function(collection) {
+        return collection.getFilteredByGlob('_posts/*.md');
+    });
    return{
       passthroughFileCopy: true,
       markdownTemplateEngine:"njk",

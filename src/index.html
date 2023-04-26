@@ -711,24 +711,3 @@ When it comes to healthy eating habits for kids, there are many things to consid
     </div>
   </div>
 </section>
-
- <script>
-         window.addEventListener("load", function() {
-  const form = document.getElementById('interest-booking-form');
-  form.addEventListener("submit", function(e) {
-    e.preventDefault();
-    const data = new FormData(form);
-    const action = e.target.action;
-    fetch(action, {
-      method: 'POST',
-      body: data,
-    })
-    .then(() => {
-      alert("Successfully submitted. We'll get in touch shortly. Thank you!");
-      form.reset(); // reset the form after successful submission
-    })
-    .catch(error => console.error(error)); // catch and log any errors
-  });
-});
- </script>
-         

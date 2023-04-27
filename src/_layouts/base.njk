@@ -6,7 +6,7 @@
       name="viewport"
       content="width=device-width, initial-scale=1, shrink-to-fit=no"
     />
-    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> 
 
 
     <link
@@ -32,6 +32,9 @@
     <link rel="stylesheet" href="/css/flaticon.css" />
     <link rel="stylesheet" href="/css/icomoon.css" />
     <link rel="stylesheet" href="/css/style.css" />
+    {% block customScripts %}
+    
+    {% endblock customScripts %}
    <title>{{ title }}</title>
    </head>
   <body>
@@ -84,7 +87,9 @@
     </div>
     {% include "header.njk" %}
     <!-- body -->
+    {% block content %}
     {{ content | safe }}
+    {% endblock content %}
     <!-- END body -->
     {% include "footer.njk" %}
   </body>

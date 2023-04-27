@@ -1,19 +1,16 @@
----
-layout: "blog.njk"
-title: "Blog"
-backgroundImage: "/images/bg_2.jpg"
-breadText : "Blog"
-breadTitle : "Our Blog"
-pagination:
-  data: collections.post
-  size: 6
-  alias: posts
----
-{% block blogContent %}
+
 <section class="ftco-section bg-light">
   <div class="container">
+    	<div class="row justify-content-center mb-5 pb-2">
+          <div class="col-md-8 text-center heading-section ftco-animate">
+            <h2 class="mb-4"><span>Recent</span> <a href="/blog">Blog<a></h2>
+            <p>Please, spend a few minute to read our most recent <a href="/blog">blog posts<a> below.</p>
+          </div>
+        </div>
+
     <div class="row">
-      {% for post in collections.posts | reverse %}
+      {% set recentPost = collections.posts.slice(0, 3) %}
+      {% for post in recentPost %}
             <div class="col-md-6 col-lg-4 ftco-animate">
               <div class="blog-entry">
                 <a
@@ -46,26 +43,5 @@ pagination:
             </div>
       {% endfor %}
     </div>
-
-    <div class="row no-gutters my-5">
-      <div class="col text-center">
-        <div class="block-27">
-          <ul>
-            <li>
-              <a href="#"><i class="ion-ios-arrow-back"></i></a>
-            </li>
-            <li class="active"><span>1</span></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
-            <li>
-              <a href="#"><i class="ion-ios-arrow-forward"></i></a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
   </div>
 </section>
-{% endblock blogContent %}

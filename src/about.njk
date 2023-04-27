@@ -1,29 +1,13 @@
 ---
-layout: "base.njk"
 title: "About Us"
+layout: "inner.njk"
+backgroundImage: "/images/bg_2.jpg"
+breadText : "About"
+breadTitle : "About Us"
 ---
-
-<section
-  class="hero-wrap hero-wrap-2"
-  style="background-image: url('/images/bg_2.jpg')"
->
-  <div class="overlay"></div>
-  <div class="container">
-    <div
-      class="row no-gutters slider-text align-items-center justify-content-center"
-    >
-      <div class="col-md-9 ftco-animate text-center">
-        <h1 class="mb-2 bread">About Us</h1>
-        <p class="breadcrumbs">
-          <span class="mr-2"
-            ><a href="/">Home <i class="ion-ios-arrow-forward"></i></a
-          ></span>
-          <span>About us <i class="ion-ios-arrow-forward"></i></span>
-        </p>
-      </div>
-    </div>
-  </div>
-</section>
+{% block customScripts %}
+<script type = "text/javascript" src="/js/about.js"></script>  
+{% endblock customScripts %}
 
 <section class="ftco-section ftco-no-pt ftc-no-pb">
   <div class="container">
@@ -218,21 +202,8 @@ The school engage in other forms of learning outside the regular class activitie
         class="col-md-8 text-center heading-section heading-section-black ftco-animate"
       >
         <h2 class="mb-4">
-          <span>
-            <script>
-              const startYear = 2013;
-              const startMonth = 8; // Note: JavaScript counts months starting from 0
-              const startDate = new Date(startYear, startMonth, 1); // Set the start date to September 1, 2013
-              const currentDate = new Date();
-              const diffInMs = currentDate - startDate;
-              const diffInYears = Math.floor(
-                diffInMs / (1000 * 60 * 60 * 24 * 365.2425)
-              ); // Account for leap years and round down
-              document.write(diffInYears);
-            </script>
-            Years of</span
-          >
-          Providing Unique Education and still Counting!
+          <span id="schoolAge"></span>
+          Years of Providing Unique Education and still Counting!
         </h2>
         <p>
           Over the past years, we have dedicated ourselves to creating a safe,

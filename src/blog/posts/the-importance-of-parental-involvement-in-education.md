@@ -1,8 +1,11 @@
 ---
-title: "The Importance of Parental Involvement in Education"
-description: "Parental involvement in education is essential for the academic and personal growth of children. As a parent, you play a crucial role in your child's education, and your involvement can have a significant impact on their academic success."
-image: "/images/image_1.jpg"
-date: "2023-04-25"
+title: The Importance of Parental Involvement in Education
+description: Parental involvement in education is essential for the academic and personal growth of children. As a parent, you play a crucial role in your child's education, and your involvement can have a significant impact on their academic success.
+coverImage: /images/image_3.jpg
+date: 2023-04-26
+author: Admin
+categories:
+  - uncategorized
 ---
 
 # The Importance of Parental Involvement in Education

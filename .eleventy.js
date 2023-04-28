@@ -10,7 +10,7 @@ module.exports = function(eleventyConfig){
    eleventyConfig.addPassthroughCopy({ "./src/favicon.ico": "/favicon.ico"});
    eleventyConfig.addPassthroughCopy({ "./src/robots.txt": "/robots.txt"});
    eleventyConfig.addCollection('posts', function(collection) {
-        return collection.getFilteredByGlob('./src/blog/posts/**/*.md').sort((a, b) => b.date - a.date);
+        return collection.getFilteredByGlob('./src/posts/**/*.md').sort((a, b) => b.date - a.date);
     });
    eleventyConfig.addFilter("dateToISO", function(date, format) {
     return DateTime.fromJSDate(date, {zone: 'utc'}).toFormat(format);

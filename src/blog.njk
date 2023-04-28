@@ -1,15 +1,11 @@
 ---
-layout: "blog.njk"
 title: "Blog"
+layout: "base.njk"
 backgroundImage: "/images/bg_2.jpg"
 breadText : "Blog"
 breadTitle : "Our Blog"
-pagination:
-  data: collections.post
-  size: 6
-  alias: posts
 ---
-{% block blogContent %}
+{% include "header_banner.njk" %}
 <section class="ftco-section bg-light">
   <div class="container">
     <div class="row">
@@ -55,10 +51,6 @@ pagination:
               <a href="#"><i class="ion-ios-arrow-back"></i></a>
             </li>
             <li class="active"><span>1</span></li>
-            <li><a href="#">2</a></li>
-            <li><a href="#">3</a></li>
-            <li><a href="#">4</a></li>
-            <li><a href="#">5</a></li>
             <li>
               <a href="#"><i class="ion-ios-arrow-forward"></i></a>
             </li>
@@ -68,4 +60,3 @@ pagination:
     </div>
   </div>
 </section>
-{% endblock blogContent %}

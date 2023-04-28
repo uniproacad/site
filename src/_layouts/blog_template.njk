@@ -1,5 +1,7 @@
-{% extends "./inner.njk" %}
+{% extends "./base.njk" %}
 
+{% include "header_banner.njk" %}
 {% block blogContent %}
+
 {{ content | safe }}
 {% endblock blogContent %}

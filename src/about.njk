@@ -1,14 +1,15 @@
 ---
 title: "About Us"
-layout: "inner.njk"
+layout: "base.njk"
 backgroundImage: "/images/bg_2.jpg"
 breadText : "About"
 breadTitle : "About Us"
 ---
-{% block customScripts %}
+{% block head %}
 <script type = "text/javascript" src="/js/about.js"></script>  
-{% endblock customScripts %}
-
+{% endblock head %}
+{% include "header_banner.njk" %}
+{% block content %}
 <section class="ftco-section ftco-no-pt ftc-no-pb">
   <div class="container">
     <div class="row">
@@ -222,7 +223,7 @@ The school engage in other forms of learning outside the regular class activitie
             <div class="block-18">
               <div class="icon"><span class="flaticon-doctor"></span></div>
               <div class="text">
-                <strong class="number" data-number="18">0</strong>
+                <strong class="number" data-number="30">0</strong>
                 <span>Qualified Teachers</span>
               </div>
             </div>
@@ -234,7 +235,7 @@ The school engage in other forms of learning outside the regular class activitie
               <div class="icon"><span class="flaticon-doctor"></span></div>
               <div class="text">
                 <span
-                  ><strong class="number" data-number="1000">0</strong>+</span
+                  ><strong class="number" data-number="500">0</strong>+</span
                 >
                 <span>Successful Kids</span>
               </div>
@@ -246,7 +247,7 @@ The school engage in other forms of learning outside the regular class activitie
             <div class="block-18">
               <div class="icon"><span class="flaticon-doctor"></span></div>
               <div class="text">
-                <strong class="number" data-number="564">0</strong>
+                <strong class="number" data-number="100">0</strong>
                 <span>Happy Parents</span>
               </div>
             </div>
@@ -257,7 +258,7 @@ The school engage in other forms of learning outside the regular class activitie
             <div class="block-18">
               <div class="icon"><span class="flaticon-doctor"></span></div>
               <div class="text">
-                <strong class="number" data-number="300">0</strong>
+                <strong class="number" data-number="3">0</strong>
                 <span>Awards Won</span>
               </div>
             </div>
@@ -267,3 +268,4 @@ The school engage in other forms of learning outside the regular class activitie
     </div>
   </div>
 </section>
+{% endblock content %}

@@ -72,11 +72,11 @@ breadTitle : "Academics/Admissions"
                 </div>
                 <div class="d-md-flex">
                   <div class="form-group ml-md-4">
-                    <input
+                    <button
                       type="submit"
                       value="Apply"
                       class="btn btn-secondary py-3 px-4"
-                    />
+                    >Apply</button>
                   </div>
                 </div>
               </form>
@@ -114,30 +114,3 @@ Overall, Unique Prospect Montessori Academics is committed to providing students
     </div>
   </div>
 </section>
-
-<script>
-  window.addEventListener("load", function () {
-    const form = document.getElementById("upma-form");
-    const submitButton = form.querySelector('button[type="submit"]');
-
-    form.addEventListener("submit", function (e) {
-      e.preventDefault();
-      submitButton.disabled = true; // disable the submit button
-
-      const data = new FormData(form);
-      const action = e.target.action;
-      fetch(action, {
-        method: "POST",
-        body: data,
-      })
-        .then(() => {
-          alert("Successfully submitted. We'll get in touch shortly. Thank you!");
-          form.reset(); // reset the form after successful submission
-        })
-        .catch((error) => console.error(error)) // catch and log any errors
-        .finally(() => {
-          submitButton.disabled = false; // re-enable the submit button
-        });
-    });
-  });
-</script>

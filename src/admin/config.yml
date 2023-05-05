@@ -2,13 +2,13 @@ backend:
   name: git-gateway
   branch: main
 
-media_folder: "/_site/images/uploads"
-public_folder: "/images/uploads"
+media_folder: "/_site/images/posts"
+public_folder: "/images/posts"
 
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/post
     label: "Posts" # Used in the UI
-    folder: "posts" # The path to the folder where the documents are stored
+    folder: "/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -22,5 +22,5 @@ collections:
       - { label: "Description:", name: "description", widgset: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
       - { label: "Author", name: "author", widget: "string" }
+      - { label: "Post Image", name: "postImage", widget: "image" }
       - { label: "Body", name: "body", widget: "markdown" }
-      - { label: "Post Image", name: "coverImage", widget: "image" }

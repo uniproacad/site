@@ -1,11 +1,14 @@
 ---
 title: Healthy Eating Habits for Kids
-description: When it comes to healthy eating habits for kids, there are many things to consider. In addition to the tips outlined in the previous section, there are a few more things you can do to promote healthy eating in your children.
+description: When it comes to healthy eating habits for kids, there are many
+  things to consider. In addition to the tips outlined in the previous section,
+  there are a few more things you can do to promote healthy eating in your
+  children.
 postImage: /images/posts/eatinghabit.jpg
-date: 2023-04-26
-author: Admin
+date: 2023-05-05T07:25:37.868Z
 categories:
-  - uncategorized
+  - post
+author: Admin
 ---
 
 When it comes to healthy eating habits for kids, there are many things to consider. In addition to the tips outlined in the previous section, there are a few more things you can do to promote healthy eating in your children.

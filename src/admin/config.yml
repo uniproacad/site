@@ -20,7 +20,7 @@ collections:
         }
       - { label: "Title", name: "title", widgset: "string" }
       - { label: "Description:", name: "description", widgset: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Author", name: "author", widget: "string" }
       - { label: "Post Image", name: "postImage", widget: "image" }
+      - { label: "Publish Date", name: "date", widget: "datetime" }
+      - { label: "Author", name: "author", widget: "string", default: "Admin" }
       - { label: "Body", name: "body", widget: "markdown" }

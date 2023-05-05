@@ -1,14 +1,14 @@
 backend:
   name: git-gateway
   branch: main
-
-media_folder: "/_site/images/posts"
+logo_url: https://uniqueprospectmontessoriacademy.com/images/logo.png
+media_folder: "_site/images/posts"
 public_folder: "/images/posts"
 
 collections:
   - name: "posts" # Used in routes, e.g., /admin/collections/post
     label: "Posts" # Used in the UI
-    folder: "/posts" # The path to the folder where the documents are stored
+    folder: "src/posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
@@ -20,7 +20,19 @@ collections:
         }
       - { label: "Title", name: "title", widgset: "string" }
       - { label: "Description:", name: "description", widgset: "string" }
-      - { label: "Post Image", name: "postImage", widget: "image" }
+      - {
+          label: "Post Image",
+          name: "postImage",
+          widget: "image",
+          allow_multiple: false,
+        }
       - { label: "Publish Date", name: "date", widget: "datetime" }
+      - {
+          label: Categories,
+          name: categories,
+          widget: list,
+          default: ["post"],
+          multiple: true,
+        }
       - { label: "Author", name: "author", widget: "string", default: "Admin" }
       - { label: "Body", name: "body", widget: "markdown" }

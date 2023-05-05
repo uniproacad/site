@@ -1,8 +1,12 @@
 ---
 layout: "base.njk"
 title: "Unique Prospect Montessori Academy, Lugbe, Abuja."
+description: "Welcome to Unique Prospect Montessori Academy, Lugbe, Abuja."
+customHeaderJS: "https://unpkg.com/netlify-cms@^2.0.0/dist/netlify-cms.js"
+customFooterJS: "#"
 ---
 
+{% block content %}    
 <section class="home-slider owl-carousel">
   <div class="slider-item" style="background-image: url(/images/bg_1.jpg)">
     <div class="overlay"></div>
@@ -350,11 +354,11 @@ title: "Unique Prospect Montessori Academy, Lugbe, Abuja."
                 <p>
                   The school engage in other forms of learning outside the regular class activities e.g
 <ul>
-<li>Home makers club</li>
-<li>Jets club</li>
-<li>Literary and debating club</li>
-<li>Press club</li>
-<li>Music club</li>
+    <li>Home makers club</li>
+    <li>Jets club</li>
+    <li>Literary and debating club</li>
+    <li>Press club</li>
+    <li>Music club</li>
     </ul>        
                 <a href="/about" class="btn btn-secondary">Read More <span class="ion-ios-arrow-round-forward"></span></a>
         </p>
@@ -587,3 +591,5 @@ The Management of the school communicates effectively with the parents, students
   </div>
 </section>
 {% include "recent_posts.njk" %}
+
+{% endblock content %}

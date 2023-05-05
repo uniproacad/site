@@ -8,7 +8,6 @@
     />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico"> 
 
-
     <link
       href="https://fonts.googleapis.com/css?family=Work+Sans:100,200,300,400,500,600,700,800,900"
       rel="stylesheet"
@@ -32,9 +31,16 @@
     <link rel="stylesheet" href="/css/flaticon.css" />
     <link rel="stylesheet" href="/css/icomoon.css" />
     <link rel="stylesheet" href="/css/style.css" />
-    {% block head %}
-    
-    {% endblock head %}
+
+  <!--Social Media Display-->
+    <meta property="og:title" content="{{ title }}"/>
+    <meta property="og:description" content="{{ description }}"/>
+    <meta property="og:type" content="website"/>
+    <meta property="og:url" content="https://{{ client.domain }}{{ page.url }}"/>
+    <meta property="og:image" content="/images/logo.png"/>
+    <meta property="og:image:secure_url" content="/images/logo.png"/>
+
+    <script src="{{ customHeaderJS }}"></script>
    <title>{{ title }}</title>
    </head>
   <body>

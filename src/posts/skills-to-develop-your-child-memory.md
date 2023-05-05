@@ -1,11 +1,13 @@
 ---
 title: Skills To Develop Your Child Memory
-description: Developing a child's memory is an important aspect of their development that can benefit them in all areas of their lives, from school to personal relationships and beyond.
+description: Developing a child's memory is an important aspect of their
+  development that can benefit them in all areas of their lives, from school to
+  personal relationships and beyond.
 postImage: /images/posts/mumkid.jpg
 date: 2023-04-26
-author: Admin
 categories:
-  - uncategorized
+  - post
+author: Admin
 ---
 
 Memory is a vital skill that plays a significant role in learning and academic success. Children with strong memory skills can better retain and recall information, which can lead to improved academic performance and better overall learning outcomes.

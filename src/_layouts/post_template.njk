@@ -4,13 +4,16 @@ title: "Blog Post"
 backgroundImage: "/images/bg_2.jpg"
 breadText : "Post"
 breadTitle : "Blog Post"
+description : ""
 ---
-{% include "header_banner.njk" %}
+{% include "post_header_banner.njk" %}
 <section class="ftco-section">
    <div class="container">
       <div class="row">
       <div class="col-lg-8 ftco-animate">
       <h2 class="mb-3">{{ title }}</h2>
+      <p>
+         {{ description }}
       <p>
          <img src="{{ postImage }}" alt="" class="img-fluid">
       </p>
